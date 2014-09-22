@@ -13,17 +13,15 @@ Acceder a Twitter con  una aplicación Sinatra que muestre en una página los am
 Funcionamiento
 -----
 
-La aplicación se ejecutará en local, para ello clona el repositorio de github twitter-popular, de la siguiente forma: 
+La aplicación se ejecutará en local, para ello clona el repositorio de github [twitter-popular], de la siguiente forma: 
 
 ```sh
 user@ubuntu-hp:~/twitter-popular$ git clone git@github.com:alu0100700435/twitter-popular.git
-
 ```
 Una vez clonado el repositorio, modifique el archivo configure.rb con sus claves. Y a continuación ejecuta bundler:
 
 ```sh
 user@ubuntu-hp:~/twitter-popular$ bundle install
-
 ```
 
 Una vez hecho todo lo anterior, procede a ejecutar el archivo twitter.rb, recomendable con una version de ruby 1.9.
@@ -42,3 +40,4 @@ Una vez en ejecución, abre el navegador y escribe en la barra de direcciones *l
 
 Y ya, sólo has de poner el usuario twitter que desees y enviar, y así apareceran sus amigos más populares. 
 
+[twitter-popular]:https://github.com/alu0100700435/twitter-popular

@@ -13,6 +13,61 @@
     text-align: center;
 }
 
+.jumbotron{
+	background-image: url("https://raw.githubusercontent.com/alu0100700435/twitter-popular/gh-pages/public/fondo.jpg);
+	padding-top: 75px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size:100% 100%;
+	background-color: white;
+}
+
+
+.myimg{
+
+	width: 650px;
+	margin-bottom: 1%;
+	margin-top: 1%;
+}
+
+#footer{
+	margin-top: 2%;
+	background-color: #F8F8F8;
+}
+
+.text-muted{
+	padding-top: 13px;
+	text-align: center;
+}
+
+a{
+	color: #0066FF;
+}
+
 body{
-    font-family: verdana;
+	font-family: sans-serif;
+}
+
+pre{
+
+	width: 100%;
+}
+
+.main{
+
+padding-left: 10%;
+padding-right: 10%;
+}
+
+.navbar-inverse .navbar-brand {
+    color: white;
+}
+
+.sub{
+	text-shadow: 0px -1px 14px rgba(0, 0, 196, 1);
+	color: #ffffff;
+}
+
+.jumbotron h1, .jumbotron .h1 {
+    color: snow;
 }
