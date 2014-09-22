@@ -1,0 +1,14 @@
+.mybtn{
+	margin-top: 2%;
+	
+}
+
+ input{
+    color: grey;
+    font: inherit;
+    margin: 0;
+}
+
+.lista{
+    text-align: center;
+}
