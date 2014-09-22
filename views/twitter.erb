@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link href="/bootstrap.min.css" rel="stylesheet">
+		<link href="/bootstrap.css" rel="stylesheet">
+		<link href="/style.css" rel="stylesheet">
+		<link href="/cover.css" rel="stylesheet">
+		<!-- Custom styles for this template -->
+		<link href="/jumbotron.css" rel="stylesheet">
+	</head>
+
+	<body>
+	
+	    <div class="site-wrapper">
+        <div class="site-wrapper-inner">
+
+          <div class="cover-container">
+
+            <div class="masthead clearfix">
+              <div class="inner">
+                <h3 class="masthead-brand">Alu0100700435</h3>
+              </div>
+            </div>
+
+            <div class="inner cover">
+              <h1 class="cover-heading">Twitter App de Popularidad</h1>
+              <p class="lead">
+                Sistemas y Tecnologías web
+              </p>
+            </div>
+
+            <div class="main">
+              <div>
+                <form action="/" method="post">
+                  <p>
+                    <b>Introduzca un usuario twitter: </b>
+                  </p>
+                  <input type="text" name="firstname"  value="" autofocus>
+                  <p class="mybtn">
+                    <button  type="submit" value="Submit" class="btn btn-default"> Enviar </button>
+                  <p>
+                </form>
+              </div>
+              <div>
+
+              <% if @name == ''%>
+                <p id="warning"> No se ha introducido usuario o es incorrecto </p>
+              <%else%>
+                <p><b> Usuario: <%= @name %></b></p>
+              <%end %>
+
+
+              <% if @name != ''%>
+                
+                  <p>Sus amigos más populares son:</p>
+                  <ol>
+                       <% @usuarios.each { |user, count| %> 
+                      <li class ="lista"><%= user %> : <%= count %> <br></li>
+                     <% } %>
+                  </ol>
+                
+              <%end%>
+  
+              </div>
+            </div>
+
+            <div class="mastfoot"> <!-- inicio footer-->
+              <div class="inner">
+                <p> 
+                  <a target="_blank" href="https://alu0100700435.github.io/">alu0100700435</a> | Copyright 2011-2014. All rights reserved. 
+                </p>
+              </div>
+            </div> <!-- fin footer-->
+
+          </div>
+        </div>
+      </div>
+
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script src="/bootstrap.min.js"></script>
+
+	</body>
+</html>
