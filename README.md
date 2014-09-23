@@ -7,7 +7,7 @@ Sistemas y Tecnologías web
 Objetivo
 -----
 
-Acceder a Twitter con  una aplicación Sinatra que muestre en una página los amigos más populares de un usuario cualquiera(un máximo de 10), para ello se clasificarán de mayor a menor según el numero de seguidores de sus amigos.
+Acceder a Twitter con  una aplicación Sinatra que muestre en una página los amigos más populares de un usuario cualquiera(un máximo de 10), para ello se clasificarán de mayor a menor según el numero de seguidores.
 
 
 Funcionamiento
@@ -24,7 +24,7 @@ Una vez clonado el repositorio, modifique el archivo configure.rb con sus claves
 user@ubuntu-hp:~/twitter-popular$ bundle install
 ```
 
-Una vez hecho todo lo anterior, procede a ejecutar el archivo twitter.rb, recomendable con una version de ruby 1.9.
+Una vez hecho todo lo anterior, procede a ejecutar el archivo twitter.rb o twitter_v2.rb, recomendable con una version de ruby 1.9.
 
 ```sh
 user@ubuntu-hp:~/twitter-popular$ ruby twitter.rb 
@@ -39,5 +39,6 @@ Una vez en ejecución, abre el navegador y escribe en la barra de direcciones *l
 ![ejemplo navegador](https://raw.githubusercontent.com/alu0100700435/twitter-popular/gh-pages/public/ejemplo.png) 
 
 Y ya, sólo has de poner el usuario twitter que desees y enviar, y así apareceran sus amigos más populares. 
+Es probable, que si el usuario elegido tiene muchos amigos, la aplicación tarde en responder o no responda debido a un exceso tiempo de acceso. 
 
 [twitter-popular]:https://github.com/alu0100700435/twitter-popular
