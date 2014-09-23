@@ -39,6 +39,6 @@ Una vez en ejecución, abre el navegador y escribe en la barra de direcciones *l
 ![ejemplo navegador](https://raw.githubusercontent.com/alu0100700435/twitter-popular/gh-pages/public/ejemplo.png) 
 
 Y ya, sólo has de poner el usuario twitter que desees y enviar, y así apareceran sus amigos más populares. 
-Es probable, que si el usuario elegido tiene muchos amigos, la aplicación tarde en responder o no responda debido a un exceso tiempo de acceso. 
+Es probable, que si el usuario elegido tiene muchos amigos, la aplicación tarde en responder o no responda debido a un excesivo tiempo de acceso. 
 
 [twitter-popular]:https://github.com/alu0100700435/twitter-popular
