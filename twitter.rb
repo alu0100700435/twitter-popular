@@ -8,12 +8,14 @@ get '/' do
   @fc = 0 # numero de amigos
   @name = ''  #nombre de usuario twitter
   @usuarios = Hash.new	#almacenara los amigos y el numero de seguidores
+  @users = []
   erb :twitter
 end
 
 post '/' do  
   @fc = 0   
   @usuarios = Hash.new
+  @users = []
   @name = params[:firstname] || ''  #recoge del parametro firstname el nombre de usuario
   client = my_twitter_client()  #establece conexion twitter
   
@@ -37,7 +39,7 @@ post '/' do
         end         
     end 
     
-    @usuarios = @usuarios.sort_by {|k,v| -v} #ordena los amigos de mayor a menor segun sus seguidores              
+    @users = @usuarios.sort_by {|k,v| -v} #ordena los amigos de mayor a menor segun sus seguidores              
   end
   erb :twitter
 end
