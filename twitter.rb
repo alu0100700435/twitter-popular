@@ -22,16 +22,16 @@ post '/' do
   if client.user? @name #si el usuario introducido es de twitter 
     @fc = client.user(@name).friends_count #recoge el numero de amigos del usuario
         
-    if (@fc <=20) #si tiene menos de 20 amigos
+    if (@fc <=10) #si tiene menos de 10 amigos
         amigos = client.friend_ids(@name).attrs[:ids].take(@fc) #coge tantos amigos como tiene el usuario segun su atributo id
         @fc.times do |i|            
             amigos.map{@usuarios[client.user(amigos[i]).name] = client.user(amigos[i]).followers_count.to_i} 
         end 
     end
     
-    if (@fc > 20) #si tiene mas de 20 amigos  
-        amigos = client.friend_ids(@name).attrs[:ids].take(20) #coge 20 amigos  del usuario segun su atributo id
-        20.times do |i|            
+    if (@fc > 10) #si tiene mas de 10 amigos  
+        amigos = client.friend_ids(@name).attrs[:ids].take(10) #coge 20 amigos  del usuario segun su atributo id
+        10.times do |i|            
             amigos.map{@usuarios[client.user(amigos[i]).name] = client.user(amigos[i]).followers_count.to_i} 
         end         
     end 
