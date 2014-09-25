@@ -26,12 +26,11 @@ post '/' do
         a_user = client.user(@name) 
         @fc = a_user.friends_count
         
-        if(@fc < 10)
-            @fc.times do |i|
-                @users[i] = usuarios[i]
-            end      
+        if(@fc <= 10)
+            @users = usuarios
+                  
         end
-        if(@fc >= 10)    
+        if(@fc > 10)    
             10.times do |i|
                 @users[i] = usuarios[i]
             end 

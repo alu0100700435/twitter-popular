@@ -20,22 +20,19 @@ post '/' do
   client = my_twitter_client()  #establece conexion twitter
   
   if client.user? @name #si el usuario introducido es de twitter 
-    
-    a_user = client.user(@name) 
-    @fc = a_user.friends_count #recoge el numero de amigos del usuario
-    amigos = client.friend_ids(@name).attrs[:ids].take(10) #coge 10 amigos del usuario segun su atributo id
-    
-    if (@fc < 10) #si tiene menos de diez amigos
-        @fc.times do |i| 
-            user_n = client.user(amigos[i])
-            @usuarios[user_n.screen_name.to_s] = user_n.followers_count.to_i 
-        end 
+    @fc = client.user(@name).friends_count #recoge el numero de amigos del usuario
         
+    if (@fc <=20) #si tiene menos de 20 amigos
+        amigos = client.friend_ids(@name).attrs[:ids].take(@fc) #coge tantos amigos como tiene el usuario segun su atributo id
+        @fc.times do |i|            
+            amigos.map{@usuarios[client.user(amigos[i]).name] = client.user(amigos[i]).followers_count.to_i} 
+        end 
     end
-    if (@fc >= 10) #si tiene mas de diez amigos  
-        10.times do |i|
-            user_n = client.user(amigos[i])
-            @usuarios[user_n.screen_name.to_s] = user_n.followers_count.to_i
+    
+    if (@fc > 20) #si tiene mas de 20 amigos  
+        amigos = client.friend_ids(@name).attrs[:ids].take(20) #coge 20 amigos  del usuario segun su atributo id
+        20.times do |i|            
+            amigos.map{@usuarios[client.user(amigos[i]).name] = client.user(amigos[i]).followers_count.to_i} 
         end         
     end 
     
