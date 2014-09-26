@@ -24,13 +24,13 @@ post '/' do
         usuarios = usuarios.sort_by {|k,v| -v} #ordena de mayor a menor
         
         a_user = client.user(@name) 
-        @fc = a_user.friends_count
+        @fc = a_user.friends_count  #recoge el numero de amigos del usuario
         
-        if(@fc <= 10)
+        if(@fc <= 10) #si tiene 10 amigos o menos
             @users = usuarios
                   
         end
-        if(@fc > 10)    
+        if(@fc > 10) #si tiene mas de 10 amigos, solo coge los diez primeros 
             10.times do |i|
                 @users[i] = usuarios[i]
             end 
